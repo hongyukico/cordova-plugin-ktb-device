@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-ktb-device" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>DeviceInfo</name>
+    <js-module name="DeviceInfo" src="www/DeviceInfo.js">
+        <clobbers target="cordova.plugins.DeviceInfo" />
+    </js-module>
+    <!-- android-->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DeviceInfo">
+                <param name="android-package" value="com.ktb.plugin.DeviceInfoPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/DeviceInfoPlugin.java" target-dir="src/com/ktb/plugin" />
+        <source-file src="src/android/IntenetUtil.java" target-dir="src/com/ktb/plugin/util" />
+    </platform>
+    <!-- iOS -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+
+            <!-- 替换插件类名 -->
+
+            <feature name="DeviceInfo">
+                <param name="ios-package" value="CDVAttributePlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/CDVAttributePlugin.h" />
+        <source-file src="src/ios/CDVAttributePlugin.m" />
+        <source-file src="src/ios/CDVZYJReachability.h" />
+        <source-file src="src/ios/CDVZYJReachability.m" />
+        <!-- 引用插件的需要支持的框架，没有引用平台可以注释调 -->
+
+        <!-- <framework src="AudioToolbox.framework" weak="true" /> -->
+    </platform>
+</plugin>

@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-ktb-device",
+  "version": "1.0.0",
+  "description": "device info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "cordova":{
+	"id":"cordova-plugin-ktb-device",
+	"platforms":[
+		"android",
+		"ios"
+	]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hongyukico/cordova-plugin-ktb-device.git"
+  },
+  "keywords": [
+    "cordova",
+    "cache"
+  ],
+  "author": "ktb",
+  "license": "ISC",
+  "homepage": "https://github.com/hongyukico/cordova-plugin-ktb-device#readme"
+}
